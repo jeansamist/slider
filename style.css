@@ -1,0 +1,143 @@
+:root {
+  --primary: #6c63ff;
+  --primary-shadow: #514bc5;
+  --primary-opact: #6b63ff62;
+  --bg: #f8f9fe;
+  --color: #333;
+  --shadow: #d8e1e8;
+  --border: #d5e3ec;
+  --red: #f25353;
+  --red-shadow: #c44444;
+  --green: #41cf7c;
+  --green-shadow: #30965a;
+  --warning: #feb32b;
+  --warning-shadow: #c98f23;
+  --font-family: Calibri, Verdana, Roboto, Arial, sans-serif;
+  --font-size: 17px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./images/bg.jpg") no-repeat center / cover fixed;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--color);
+  line-height: 1.5;
+}
+main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.2);
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+.slider button > svg path {
+  stroke: #fff;
+}
+.slider {
+  width: 40% !important;
+}
+.slider button {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  transform: translateY(-50%) scale(2);
+  cursor: pointer;
+  border: none;
+  z-index: 2;
+  border-radius: 50%;
+}
+.slider button:nth-of-type(1) {
+  left: 0;
+}
+
+.slider button:nth-of-type(2) {
+  right: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+img,
+video {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+}
+
+.slider-item {
+  float: left;
+  transform: scale(0.5);
+  opacity: 0.2;
+  margin: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.slider img {
+  -moz-window-dragging: none;
+}
+h1 {
+  margin: 1em 0;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+.slider {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+.slides-container {
+  transition: transform 0.5s ease-in-out;
+}
+.slider-item.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card {
+  background: #fff;
+  width: 80%;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  position: relative;
+}
+.card > .text {
+  /* position: absolute; */
+  top: 40%;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 1.5em;
+  background: #fff;
+}
